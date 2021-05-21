@@ -13,9 +13,25 @@ before_action :set_trainer, only: [:show, :update, :edit, :destroy]
   def new 
     render component: "TrainerNew"
   end
+
+  def create
+    @trainer = Trainer.new(trainer_params)
+    if(@trainer.save)
+      redirect_to trainer_path(@trainer.id)
+    else
+    end
+  end
   
   def edit 
-    render component: "TrainerEdit"
+    render component: "TrainerEdit", props: {trainer: @trainer}
+  end
+
+  def update
+    if(@trainer.update(trainer_params))
+      redirect_to trainer_path(@trainer.id)
+    else
+      binding.pry
+    end
   end
 
   def destroy
@@ -27,6 +43,10 @@ before_action :set_trainer, only: [:show, :update, :edit, :destroy]
 
   def set_trainer
     @trainer = Trainer.find(params[:id])
+  end
+
+  def trainer_params
+    params.require(:trainer).permit(:name, :age)
   end
 
 end

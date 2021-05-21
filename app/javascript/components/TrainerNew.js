@@ -1,9 +1,10 @@
 import React from 'react'
-
+import TrainerForm from './TrainerForm'
 const TrainerNew = (props) => {
   return(
     <div>
-      <h1>TrainerNew Page</h1>
+      <h1>Create a Trainer</h1>
+      <TrainerForm />
     </div>
   )
 }
