@@ -1,5 +1,5 @@
 class TrainersController < ApplicationController
-
+before_action :set_trainer, only: [:show, :update, :edit, :destroy]
 
   def index
     @trainers = Trainer.all
@@ -7,7 +7,7 @@ class TrainersController < ApplicationController
   end
   
   def show
-    render component: "Trainer"
+    render component: "Trainer", props: {trainer: @trainer}
   end
   
   def new 
@@ -18,5 +18,10 @@ class TrainersController < ApplicationController
     render component: "TrainerEdit"
   end
 
+  private
+
+  def set_trainer
+    @trainer = Trainer.find(params[:id])
+  end
 
 end

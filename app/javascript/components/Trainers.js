@@ -20,6 +20,7 @@ const Trainers = (props) => {
         <a href="/">Home</a>
       </nav>
       <h1>Pokemon Trainers</h1>
+      <a href="/trainers/new">Create New Trainer</a>
       {renderTrainers()}
     </div>
   )
