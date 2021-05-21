@@ -18,6 +18,11 @@ before_action :set_trainer, only: [:show, :update, :edit, :destroy]
     render component: "TrainerEdit"
   end
 
+  def destroy
+    @trainer.destroy
+    redirect_to trainers_path
+  end
+
   private
 
   def set_trainer

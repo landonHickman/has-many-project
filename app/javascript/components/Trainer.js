@@ -11,7 +11,6 @@ const Trainer = (props) => {
       <h2>Age: {trainer.age}</h2>
       <a href={`/trainers/${trainer.id}/edit`}>Edit</a>
       <a href={`/trainers/${trainer.id}`} data-method="delete">Delete</a>
-      
     </div>
   )
 }
