@@ -7,7 +7,7 @@ before_action :set_trainer, only: [:show, :update, :edit, :destroy]
   end
   
   def show
-    render component: "Trainer", props: {trainer: @trainer}
+    render component: "Trainer", props: {trainer: @trainer }
   end
   
   def new 
