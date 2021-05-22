@@ -7,7 +7,7 @@ before_action :set_trainer, only: [:show, :update, :edit, :destroy]
   end
   
   def show
-    render component: "Trainer", props: {trainer: @trainer }
+    render component: "Trainer", props: {trainer: @trainer}
   end
   
   def new 
@@ -49,4 +49,7 @@ before_action :set_trainer, only: [:show, :update, :edit, :destroy]
     params.require(:trainer).permit(:name, :age)
   end
 
+  def set_pokemon
+    @pokemon = @trainer.pokemons.find(params[:id])
+  end
 end
