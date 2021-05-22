@@ -1,9 +1,15 @@
 import React from 'react'
-
+import PokemonForm from './PokemonForm'
 const PokemonEdit = (props) => {
+  const {pokemon, trainer} = props
   return(
     <div>
-      <h1>PokemonEdit Page</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href={`/trainers/${trainer.id}/pokemons/${pokemon.id}`}>Back</a>
+      </nav>
+      <h1>Rename {pokemon.name}?</h1>
+      <PokemonForm pokemon={pokemon} trainer={trainer}/>
     </div>
   )
 }

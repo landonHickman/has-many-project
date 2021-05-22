@@ -19,7 +19,7 @@ const Pokemons = (props) => {
         <a href="/">Home</a>
         <a href={`/trainers/${trainer.id}`}>Back</a>
       </nav>
-      <h1>Pokemons Page</h1>
+      <h1>Trainer {trainer.name}'s Pokemon</h1>
       <a href={`/trainers/${trainer.id}/pokemons/new`}>Capture Pokemon</a>
       {renderPokemons()}
     </div>
