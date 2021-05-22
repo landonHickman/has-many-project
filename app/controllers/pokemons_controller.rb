@@ -1,8 +1,9 @@
 class PokemonsController < ApplicationController
+  before_action :set_trainer
+  before_action :set_pokemon, only: [:show, :update, :edit, :destroy]
 
 def index
-  @pokemons = Pokemon.all
-  render component: "Pokemons", props: {trainer: @trainer, pokemons: @pokemons}
+  render component: "Pokemons", props: {trainer: @trainer, pokemons: @trainer.pokemons}
 end
 
 def show
@@ -22,5 +23,9 @@ def set_trainer
   @trainer = Trainer.find(params[:trainer_id])
 end
 
+def set_pokemon
+  @pokemon = @trainer.pokemons.find(params[:id]) 
+  
+end
 
 end

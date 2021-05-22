@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Pokemons = (props) => {
-  const {trainers, pokemons} = props
+  const {trainer, pokemons} = props
 
   const renderPokemons = () => {
     return pokemons.map (pokemon => {
