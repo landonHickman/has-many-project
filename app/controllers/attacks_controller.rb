@@ -15,10 +15,9 @@ class AttacksController < ApplicationController
   end
 
   def create
-    attack = @pokemon.new(attack_params)
+    attack = @pokemon.attacks.new(attack_params)
     if (attack.save)
-      redirect_to #check later
-    else
+      redirect_to pokemon_attacks_path(@pokemon)
     end
   end
 

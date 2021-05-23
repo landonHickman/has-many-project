@@ -1,9 +1,12 @@
 import React from 'react'
+import AttackForm from './AttackForm'
 
 const AttackNew = (props) => {
+  const {pokemon} = props
   return(
     <div>
-      <h1>AttackNew Page</h1>
+      <h1>Create an Attack</h1>
+      <AttackForm pokemon={pokemon} />
     </div>
   )
 }
