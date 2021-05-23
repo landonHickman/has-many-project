@@ -1,4 +1,5 @@
 import React from 'react'
+//import trainer
 import TrainerForm from './TrainerForm'
 const TrainerNew = (props) => {
   return(
@@ -8,6 +9,7 @@ const TrainerNew = (props) => {
         <a href="/">Back</a>
       </nav>
       <h1>Create a Trainer</h1>
+      {/* use the trainer form nothing to pass in. */}
       <TrainerForm />
     </div>
   )

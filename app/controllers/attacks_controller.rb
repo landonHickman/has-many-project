@@ -27,7 +27,7 @@ class AttacksController < ApplicationController
 
   def update
     if @attack.update(attack_params)
-      redirect_to #add later
+      redirect_to pokemon_attacks_path(@pokemon)
     else
     end
   end
@@ -53,7 +53,7 @@ class AttacksController < ApplicationController
   end
 
   def set_attack  #gets attack id passes to before action
-    @attack = @pokemon.attacks.find(params[:id])   #####This is where i am getting an error couldnt find attack without an ID#####
+    @attack = @pokemon.attacks.find(params[:id])  
   end
 
 

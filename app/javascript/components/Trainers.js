@@ -3,6 +3,7 @@ import React from 'react'
 const Trainers = (props) => {
   const {trainers} = props
 
+  //create function to render and map all singular trainers.
   const renderTrainers = () => {
     return trainers.map (trainer => {
       return(
@@ -15,7 +16,7 @@ const Trainers = (props) => {
   }
 
   return(
-    <div id="center">
+    <div>
       <nav>
         <a href="/">Home</a>
       </nav>

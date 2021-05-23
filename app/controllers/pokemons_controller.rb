@@ -3,6 +3,7 @@ class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :update, :edit, :destroy]
 
   def index
+    #pokemons key = @trainer.pokemons
     render component: "Pokemons", props: {trainer: @trainer, pokemons: @trainer.pokemons}
   end
 
@@ -11,10 +12,12 @@ class PokemonsController < ApplicationController
   end
 
   def new
+    #only need trainer. creating pokemon
     render component: "PokemonNew", props: {trainer: @trainer}
   end
 
   def create
+    #use .save. set pokemon = @trainer.pokemons.new
     pokemon = @trainer.pokemons.new(pokemon_params)
     if(pokemon.save)
       redirect_to trainer_pokemons_path(@trainer.id)
@@ -32,6 +35,7 @@ class PokemonsController < ApplicationController
   end
 
   def update
+    #use .update
     if (@pokemon.update(pokemon_params))
       redirect_to trainer_pokemons_path(@trainer.id)
     else

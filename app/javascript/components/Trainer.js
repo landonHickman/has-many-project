@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Trainer = (props) => {
-  const {trainer, pokemon} = props
+  const {trainer} = props
   return(
     <div>
       <nav>
@@ -13,8 +13,6 @@ const Trainer = (props) => {
       <a href={`/trainers/${trainer.id}/edit`}>Edit Trainer Profile</a>
       <a href={`/trainers/${trainer.id}`} data-method="delete">Euthanize {trainer.name}</a>
       <br/>
-      {/* <h3>Pokemon</h3>
-      <h4>{pokemons.name}</h4> */}
       <p></p>
       <a href={`/trainers/${trainer.id}/pokemons`}>View {trainer.name}'s Pokemon</a>
     </div>
