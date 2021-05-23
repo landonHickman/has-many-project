@@ -15,6 +15,7 @@ const Trainer = (props) => {
       <br/>
       {/* <h3>Pokemon</h3>
       <h4>{pokemons.name}</h4> */}
+      <p></p>
       <a href={`/trainers/${trainer.id}/pokemons`}>View {trainer.name}'s Pokemon</a>
     </div>
   )

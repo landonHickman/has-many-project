@@ -14,7 +14,7 @@ const Pokemons = (props) => {
     })
   }
   return(
-    <div>
+    <div class="center">
       <nav>
         <a href="/">Home</a>
         <a href={`/trainers/${trainer.id}`}>Back</a>

@@ -13,9 +13,28 @@
  *= require_tree .
  *= require_self
  */
-body {
+ @import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+
+ body {
   text-align: center;
+  background-image: url("pokemon-background.jpeg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  color: white;
+  text-shadow: black 3px 3px;
+  display: grid;
+  place-items: center;
+  font-family: 'Chela One', cursive;
+  
 }
-a {
-  margin-right: 10px;
-}
+
+
+ a {
+  margin: 10px 10px 10px 10px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 2px 6px 2px 6px;
+  border: white solid 2px;
+  }

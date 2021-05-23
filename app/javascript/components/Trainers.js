@@ -7,7 +7,7 @@ const Trainers = (props) => {
     return trainers.map (trainer => {
       return(
         <div>
-          <h3>Trainer {trainer.name}</h3>
+          <h2>Trainer {trainer.name}</h2>
           <a href={`/trainers/${trainer.id}`}>View Trainer</a>
         </div>
       )

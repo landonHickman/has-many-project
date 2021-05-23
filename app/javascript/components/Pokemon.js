@@ -9,9 +9,11 @@ const Pokemon = (props) => {
         <a href="/">Home</a>
         <a href={`/trainers/${trainer.id}/pokemons`}>Back</a>
       </nav>
-      <h1>{pokemon.name}'s Page</h1>
+      <h1>{pokemon.name}</h1>
       <a href={`/trainers/${trainer.id}/pokemons/${pokemon.id}/edit`}>Rename</a>
       <a href={`/trainers/${trainer.id}/pokemons/${pokemon.id}`} data-method="delete">Euthanize {pokemon.name}</a>
+      <br/>
+      <p></p>
       <a href={`/pokemons/${pokemon.id}/attacks/`}>{pokemon.name}'s Attacks</a>
     </div>
   )

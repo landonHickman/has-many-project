@@ -8,7 +8,7 @@ const Attacks = (props) => {
       return (
         <div>
           <h2> {attack.move}</h2>
-          <h3> {attack.power}</h3>
+          <h3>Power: {attack.power}</h3>
           <a href={`/pokemons/${pokemon.id}/attacks/${attack.id}`}>View</a>
         </div>
 
