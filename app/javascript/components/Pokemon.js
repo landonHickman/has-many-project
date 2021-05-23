@@ -12,6 +12,7 @@ const Pokemon = (props) => {
       <h1>{pokemon.name}'s Page</h1>
       <a href={`/trainers/${trainer.id}/pokemons/${pokemon.id}/edit`}>Rename</a>
       <a href={`/trainers/${trainer.id}/pokemons/${pokemon.id}`} data-method="delete">Euthanize {pokemon.name}</a>
+      <a href={`/pokemons/${pokemon.id}/attacks/`}>{pokemon.name}'s Attacks</a>
     </div>
   )
 }
