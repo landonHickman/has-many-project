@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "faker"
 Trainer.destroy_all
-4.times do
+10.times do
   trainer = Trainer.create(name: Faker::Name.unique.first_name, age: rand(15..50))
-  4.times do
+  6.times do
     pokemon = trainer.pokemons.create(name: Faker::Games::Pokemon.name)
     4.times do
-      pokemon.attacks.create(move: Faker::Games::Pokemon.move, power: rand(100..200))
+      pokemon.attacks.create(move: Faker::Games::Pokemon.move, power: rand(15..250))
     end
   end
 end
