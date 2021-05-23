@@ -1,6 +1,6 @@
 class AttacksController < ApplicationController
   before_action :set_pokemon
-  before_action :set_attack, only: [:new, :edit, :show, :update]
+  before_action :set_attack, only: [:destroy, :edit, :show, :update]
 
   def index
     render component: "Attacks", props: {pokemon: @pokemon, attacks: @pokemon.attacks}
@@ -35,7 +35,7 @@ class AttacksController < ApplicationController
 
   def destroy
     @attack.destroy
-    redirect_to #fill out later
+    redirect_to pokemon_attacks_path(@pokemon)
   end
   
   private
@@ -54,7 +54,7 @@ class AttacksController < ApplicationController
   end
 
   def set_attack  #gets attack id passes to before action
-    @attack = @pokemon.attacks.find(params[:id])
+    @attack = @pokemon.attacks.find(params[:id])   #####This is where i am getting an error couldnt find attack without an ID#####
   end
 
 

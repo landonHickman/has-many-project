@@ -7,7 +7,8 @@ const Attacks = (props) => {
     return attacks.map (attack => {
       return (
         <div>
-          <h3> {attack.move}</h3>
+          <h2> {attack.move}</h2>
+          <h3> {attack.power}</h3>
           <a href={`/pokemons/${pokemon.id}/attacks/${attack.id}`}>View</a>
         </div>
 
@@ -21,6 +22,7 @@ const Attacks = (props) => {
         <a href={`/trainers/${pokemon.trainer_id}/pokemons/${pokemon.id}`}>Back</a>
       </nav>
       <h1>{pokemon.name}'s Attacks</h1>
+      <a href={`/pokemons/${pokemon.id}/attacks/new`}>Create an Attack</a>
       {renderAttacks()}
     </div>
   )
